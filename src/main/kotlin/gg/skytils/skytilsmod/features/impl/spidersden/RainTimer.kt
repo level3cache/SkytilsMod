@@ -38,7 +38,7 @@ object RainTimer {
     class RainTimerGuiElement : GuiElement(name = "Rain Timer", x = 10, y = 10) {
         override fun render() {
             if (Utils.inSkyblock && toggled) {
-                if (nextRain < System.currentTimeMillis()) nextRain += 36000
+                if (nextRain < System.currentTimeMillis()) nextRain += 3600000
                 val remainingRain = ((nextRain - System.currentTimeMillis()) - 2400000) / 1000L
                 if (remainingRain > 0) {
                     fr.drawString(
